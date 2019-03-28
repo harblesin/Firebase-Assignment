@@ -1,0 +1,17 @@
+.jumbotron{
+    background-image: linear-gradient(to bottom right, rgb(86, 136, 211), rgb(57, 12, 180));
+    text-align: center;
+    border-radius: 30px;
+    border: 2px dotted maroon;
+}
+
+body{
+    background-image: url(../images/communication-pattern.gif);
+}
+
+.top{
+    background-color: blue;
+}
+.listings{
+    background-color: white;
+}
