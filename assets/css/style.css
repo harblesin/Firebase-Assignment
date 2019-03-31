@@ -9,9 +9,23 @@ body{
     background-image: url(../images/communication-pattern.gif);
 }
 
-.top{
+.topper{
     background-color: blue;
 }
-.listings{
+
+.listing{
     background-color: white;
+}
+
+form{
+    background-color:white;
+}
+
+tbody{
+    background-color: white;
+    border:2px solid rgb(231, 211, 30);
+}
+
+.inputs{
+    border: 3px solid yellow;
 }

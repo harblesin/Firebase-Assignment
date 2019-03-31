@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
@@ -14,34 +15,71 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-12 jumbotron">
+            <div class="col-12 jumbotron listing">
                 <h1>
                     We Got Trains, We Got Times!
                 </h1>
 
             </div>
         </div>
-        <div class="row card-img-top">
-            <div row="card-title">
-                <span class="card-body col-4">
-                    Train Name
-                </span>
-                <span class="col-2">
-                    Destination
-                </span>
-                <span class="col-2">
-                    Frequency
-                </span>
-                <span class="col-2">
-                    Next Arrival
-                </span>
-                <span class="col-2">
-                    Minutes Away
-                </span>
+        <div class="row">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="trainDis"></th>
+                        <th id="destDis"></th>
+                        <th id="freqDis"></th>
+                        <th id="nextDis"></th>
+                        <th id="minDis"></th>
+                    </tr>
 
-            </div>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead class="thead-dark">
+                    <th>Add Name</th>
+                </thead>
+            </table>
         </div>
 
+        <div class="row">
+
+            <div class="col-12 inputs">
+                <form>
+                    <div class="form-group">
+                        <label for="TrainName">Train Name</label>
+                        <input type="text" class="form-control" id="train">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="dest">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstTrain">First Train Time (HH:mm - Military Time)</label>
+                        <input type="text" class="form-control" id="firstTrain">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency</label>
+                        <input type="text" class="form-control" id="freq">
+                    </div>
+                    <button class="btn btn-dark addBtn">
+                        Add
+                    </button>
+                </form>
+            </div>
+        </div>
 
     </div>
 </body>
