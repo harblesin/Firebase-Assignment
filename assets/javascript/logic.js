@@ -29,11 +29,16 @@ $(document).ready(function () {
         var newFreq = $("#freq").val().trim();
         var firstTrain = $("#firstTrain").val().trim();
 
+        console.log(moment(firstTrain, "HH:mm").format("hh:mm a"));
+
+        var combine = firstTrain + newFreq;
+        var nextArrival = moment(combine, "HH:mm").format("hh:mm a");
+        var minAway = moment().endOf(newFreq).fromNow(firstTrain);
 
         if (newTrain == "" || newDest == "" || newFreq == "" ||
             firstTrain == "") {
 
-                alert("Please complete all fields before adding.")
+                alert("Please complete all fields before adding new train schedules.")
 
         } else {
 
@@ -43,7 +48,7 @@ $(document).ready(function () {
                 Train_Name: newTrain,
                 Destination: newDest,
                 Frequency: newFreq,
-                Next_Arrival: newArrival,
+                Next_Arrival: nextArrival,
                 Minutes_Away: minAway
             })
 
