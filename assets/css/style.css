@@ -23,9 +23,8 @@ form{
 
 tbody{
     background-color: white;
-    border:2px solid rgb(231, 211, 30);
 }
 
-.inputs{
-    border: 3px solid yellow;
+input{
+    padding:20px;
 }
